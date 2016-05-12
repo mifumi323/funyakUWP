@@ -107,6 +107,8 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FpsCounter.cs" />
+    <Compile Include="FpsTimer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\UWPView.rd.xml" />
   </ItemGroup>
