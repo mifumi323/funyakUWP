@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPView", "UWPView\UWPView.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPTests", "UWPTests\UWPTests.csproj", "{74B026F7-9FF7-4AD0-95B1-125CB3E40046}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "funyak\Core\Core.csproj", "{E20B6550-CE87-4C30-AAE0-7798A5936672}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "funyak", "funyak", "{C8E445E1-AC15-49EF-9F57-E7070BB9BBD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,8 +61,27 @@ Global
 		{74B026F7-9FF7-4AD0-95B1-125CB3E40046}.Release|x86.ActiveCfg = Release|x86
 		{74B026F7-9FF7-4AD0-95B1-125CB3E40046}.Release|x86.Build.0 = Release|x86
 		{74B026F7-9FF7-4AD0-95B1-125CB3E40046}.Release|x86.Deploy.0 = Release|x86
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|ARM.Build.0 = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|x64.Build.0 = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Debug|x86.Build.0 = Debug|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|ARM.Build.0 = Release|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|x64.ActiveCfg = Release|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|x64.Build.0 = Release|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|x86.ActiveCfg = Release|Any CPU
+		{E20B6550-CE87-4C30-AAE0-7798A5936672}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E20B6550-CE87-4C30-AAE0-7798A5936672} = {C8E445E1-AC15-49EF-9F57-E7070BB9BBD4}
 	EndGlobalSection
 EndGlobal

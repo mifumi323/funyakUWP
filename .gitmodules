@@ -1,0 +1,3 @@
+[submodule "funyak"]
+	path = funyak
+	url = git@github.com:mifumi323/funyak.git

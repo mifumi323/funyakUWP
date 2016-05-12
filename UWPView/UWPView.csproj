@@ -112,6 +112,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\UWPView.rd.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\funyak\Core\Core.csproj">
+      <Project>{e20b6550-ce87-4c30-aae0-7798a5936672}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
