@@ -21,6 +21,10 @@ namespace UWPTests
             MenuList.ItemsSource = new object[]
             {
                 new {
+                    Name = "Rectangleで画像表示するテスト",
+                    Type = typeof(RectanglePage),
+                },
+                new {
                     Name = "Win2Dを動かすテスト",
                     Type = typeof(Win2DTest),
                 },
