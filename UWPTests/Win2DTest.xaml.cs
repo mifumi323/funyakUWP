@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas;
 using Microsoft.Graphics.Canvas.Text;
 using MifuminSoft.funyak.View.Utility;
+using Windows.Foundation;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -25,6 +26,7 @@ namespace UWPTests
         private CanvasTextFormat canvasTextFormat = null;
         private bool isAlive = true;
         private AutoResetEvent drawNotifier = new AutoResetEvent(false);
+        private CanvasBitmap source = null;
 
         public Win2DTest()
         {
@@ -44,16 +46,20 @@ namespace UWPTests
 
                 using (var ds = swapChain.CreateDrawingSession(Colors.AliceBlue))
                 {
+                    ds.Antialiasing = CanvasAntialiasing.Antialiased;
+                    int i = 1;
                     for (long ticks = DateTime.Now.Ticks; ticks > DateTime.Now.AddMilliseconds(-10).Ticks;)
                     {
-                        ds.DrawEllipse(155, 115, 80, 30, Colors.Black, 3);
+                        //ds.DrawEllipse(155 + i, 115, 80, 30, Colors.Black, 3);
+                        ds.DrawImage(source, new Rect(i, i, 500, 500), new Rect(0, 0, 300, 300));
+                        i++;
                     }
                     ds.DrawText(
                         "Draw: " + drawCounter.Frame + " " + drawCounter.Fps + "\n" +
                         "Draw(Try): " + drawTryCounter.Frame + " " + drawTryCounter.Fps + "\n" +
                         "Frame:" + frameCounter.Frame + " " + frameCounter.Fps + "\n" +
                         "RenderSize:" + canvas.RenderSize + "\n" +
-                        "DesiredSize:" + canvas.DesiredSize,
+                        "i:" + i,
                         100, 100, Colors.Red, canvasTextFormat);
                 }
                 swapChain.Present();
@@ -64,9 +70,10 @@ namespace UWPTests
             }
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var swapChain = new CanvasSwapChain(new CanvasDevice(), 800, 600, 96);
+            source = await CanvasBitmap.LoadAsync(CanvasDevice.GetSharedDevice(), "Assets/Square150x150Logo.scale-200.png");
+            var swapChain = new CanvasSwapChain(CanvasDevice.GetSharedDevice(), 800, 600, 96);
             canvas.SwapChain = swapChain;
             canvasTextFormat = new CanvasTextFormat()
             {
