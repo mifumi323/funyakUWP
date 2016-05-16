@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="UWPTests.DragAndDropTest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPTests"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Rectangle Fill="#FFF4F4F5" Stroke="Black" AllowDrop="True" Margin="50" DragOver="Rectangle_DragOver" Drop="Rectangle_Drop"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="ここにドロップ" VerticalAlignment="Center"
+                   AllowDrop="True" DragOver="Rectangle_DragOver" Drop="Rectangle_Drop"/>
+    </Grid>
+</Page>

@@ -21,6 +21,10 @@ namespace UWPTests
             MenuList.ItemsSource = new object[]
             {
                 new {
+                    Name = "ドラッグアンドドロップのテスト",
+                    Type = typeof(DragAndDropTest),
+                },
+                new {
                     Name = "Rectangleで画像表示するテスト",
                     Type = typeof(RectanglePage),
                 },
