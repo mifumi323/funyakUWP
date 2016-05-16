@@ -31,7 +31,6 @@ namespace UWPTests
         public Win2DTest()
         {
             InitializeComponent();
-            CompositionTarget.Rendering += CompositionTarget_Rendering;
         }
 
         private void CompositionTarget_Rendering(object sender, object e)
@@ -82,10 +81,12 @@ namespace UWPTests
             };
             var task = new Task(MainLoop);
             task.Start();
+            CompositionTarget.Rendering += CompositionTarget_Rendering;
         }
 
         private void Page_Unloaded(object sender, RoutedEventArgs e)
         {
+            CompositionTarget.Rendering -= CompositionTarget_Rendering;
             StopMainLoop();
             canvas.SwapChain.Dispose();
             canvas.SwapChain = null;
