@@ -10,5 +10,6 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Canvas x:Name="canvas"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="button" Content="Save" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="button_Click" Background="{ThemeResource ButtonBackgroundThemeBrush}"/>
     </Grid>
 </Page>

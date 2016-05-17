@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using MifuminSoft.funyak.View.Utility;
+using Windows.Graphics.Display;
+using Windows.Graphics.Imaging;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.UI;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -22,6 +28,39 @@ namespace UWPTests
         FpsCounter counter = new FpsCounter();
 
         double vx = 0, vy = 0, vr = 0, vs =1;
+
+        private async void button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            var picker = new FileSavePicker();
+            picker.FileTypeChoices.Add("png", new List<string> { ".png" });
+            var file = await picker.PickSaveFileAsync();
+            if (file == null) { return; }
+
+            var target = canvas;
+            var bitmap = new RenderTargetBitmap();
+            await bitmap.RenderAsync(target);
+
+            var pixelBuffer = await bitmap.GetPixelsAsync();
+            var pixels = pixelBuffer.ToArray();
+            var displayInformation = DisplayInformation.GetForCurrentView();
+
+            using (var stream = await file.OpenAsync(FileAccessMode.ReadWrite))
+            {
+                var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, stream);
+
+                // 8 bit color reduction 
+                encoder.SetPixelData(
+                    BitmapPixelFormat.Bgra8,
+                    BitmapAlphaMode.Premultiplied,
+                    (uint)bitmap.PixelWidth,
+                    (uint)bitmap.PixelHeight,
+                    displayInformation.RawDpiX,
+                    displayInformation.RawDpiY,
+                    pixels);
+
+                await encoder.FlushAsync();
+            }
+        }
 
         public RectanglePage()
         {
