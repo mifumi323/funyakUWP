@@ -29,6 +29,16 @@ namespace UWPTests
 
         double vx = 0, vy = 0, vr = 0, vs =1;
 
+        private void Page_Unloaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            CompositionTarget.Rendering -= CompositionTarget_Rendering;
+        }
+
+        private void Page_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            CompositionTarget.Rendering += CompositionTarget_Rendering;
+        }
+
         private async void button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             var picker = new FileSavePicker();
@@ -110,7 +120,6 @@ namespace UWPTests
                 Fill = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)),
             };
             canvas.Children.Add(rectMain);
-            CompositionTarget.Rendering += CompositionTarget_Rendering;
         }
 
         private void CompositionTarget_Rendering(object sender, object e)
