@@ -19,6 +19,7 @@ namespace UWPTests
     /// </summary>
     public sealed partial class Win2DTest : Page
     {
+        const int vw = 1920 / 32, vh = 1080 / 32;
         private FpsTimer fpsTimer = new FpsTimer(60);
         private FpsCounter drawCounter = new FpsCounter();
         private FpsCounter drawTryCounter = new FpsCounter();
@@ -27,10 +28,20 @@ namespace UWPTests
         private bool isAlive = true;
         private AutoResetEvent drawNotifier = new AutoResetEvent(false);
         private CanvasBitmap source = null;
+        private int[,] colorMap = new int[vw, vh];
+        double vx = 0, vy = 0, vr = 0, vs = 1;
 
         public Win2DTest()
         {
             InitializeComponent();
+            var random = new Random();
+            for (int x = 0; x < vw; x++)
+            {
+                for (int y = 0; y < vh; y++)
+                {
+                    colorMap[x, y] = random.Next(5);
+                }
+            }
         }
 
         private void CompositionTarget_Rendering(object sender, object e)
@@ -46,19 +57,20 @@ namespace UWPTests
                 using (var ds = swapChain.CreateDrawingSession(Colors.AliceBlue))
                 {
                     ds.Antialiasing = CanvasAntialiasing.Antialiased;
-                    int i = 1;
-                    for (long ticks = DateTime.Now.Ticks; ticks > DateTime.Now.AddMilliseconds(-10).Ticks;)
+                    for (int x = 0; x < vw; x++)
                     {
-                        //ds.DrawEllipse(155 + i, 115, 80, 30, Colors.Black, 3);
-                        ds.DrawImage(source, new Rect(i, i, 500, 500), new Rect(0, 0, 300, 300));
-                        i++;
+                        for (int y = 0; y < vh; y++)
+                        {
+                            ds.DrawImage(source, new Rect(x * 32 * vs, y * 32 * vs, 32 * vs, 32 * vs), new Rect(colorMap[x, y] * 32, 0, 32, 32));
+                        }
                     }
+                    vr += 0.01;
+                    ds.FillRectangle((float)((vw * 16 - 16 - (vw - 1) * 16 * Math.Cos(vr) - vx) * vs), (float)((vh * 16 - 16 - (vh - 1) * 16 * Math.Sin(vr) - vy) * vs), (float)(32 * vs), (float)(32 * vs), Colors.White);
                     ds.DrawText(
                         "Draw: " + drawCounter.Frame + " " + drawCounter.Fps + "\n" +
                         "Draw(Try): " + drawTryCounter.Frame + " " + drawTryCounter.Fps + "\n" +
                         "Frame:" + frameCounter.Frame + " " + frameCounter.Fps + "\n" +
-                        "RenderSize:" + canvas.RenderSize + "\n" +
-                        "i:" + i,
+                        "RenderSize:" + canvas.RenderSize,
                         100, 100, Colors.Red, canvasTextFormat);
                 }
                 swapChain.Present();
@@ -71,8 +83,8 @@ namespace UWPTests
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            source = await CanvasBitmap.LoadAsync(CanvasDevice.GetSharedDevice(), "Assets/Square150x150Logo.scale-200.png");
-            var swapChain = new CanvasSwapChain(CanvasDevice.GetSharedDevice(), 800, 600, 96);
+            source = await CanvasBitmap.LoadAsync(CanvasDevice.GetSharedDevice(), "Assets/ice.bmp");
+            var swapChain = new CanvasSwapChain(CanvasDevice.GetSharedDevice(), 1920, 1080, 96);
             canvas.SwapChain = swapChain;
             canvasTextFormat = new CanvasTextFormat()
             {
