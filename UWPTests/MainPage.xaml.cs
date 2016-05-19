@@ -21,6 +21,10 @@ namespace UWPTests
             MenuList.ItemsSource = new object[]
             {
                 new {
+                    Name = "SharpDX.Direct2Dのテスト",
+                    Type = typeof(SharpDXTest),
+                },
+                new {
                     Name = "ドラッグアンドドロップのテスト",
                     Type = typeof(DragAndDropTest),
                 },

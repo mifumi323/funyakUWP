@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="UWPTests.SharpDXTest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPTests"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Canvas.ZIndex="1">
+        <Image x:Name="image" Stretch="None"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="FPS" VerticalAlignment="Bottom"/>
+    </Grid>
+</Page>

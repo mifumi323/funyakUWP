@@ -4,6 +4,8 @@
     "Microsoft.ApplicationInsights.PersistenceChannel": "1.0.0",
     "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
+    "SharpDX.Direct2D1": "3.0.2",
+    "SharpDX.Direct3D11": "3.0.2",
     "Win2D.uwp": "1.17.0"
   },
   "frameworks": {

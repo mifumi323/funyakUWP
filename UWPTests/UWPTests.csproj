@@ -109,6 +109,9 @@
     <Compile Include="RectanglePage.xaml.cs">
       <DependentUpon>RectanglePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SharpDXTest.xaml.cs">
+      <DependentUpon>SharpDXTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Win2DTest.xaml.cs">
       <DependentUpon>Win2DTest.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RectanglePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SharpDXTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

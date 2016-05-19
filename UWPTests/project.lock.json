@@ -286,6 +286,49 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "SharpDX/3.0.2": {
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        }
+      },
+      "SharpDX.Direct2D1/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        }
+      },
+      "SharpDX.Direct3D11/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        }
+      },
+      "SharpDX.DXGI/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "4.0.0",
@@ -2119,6 +2162,49 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "SharpDX/3.0.2": {
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        }
+      },
+      "SharpDX.Direct2D1/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        }
+      },
+      "SharpDX.Direct3D11/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        }
+      },
+      "SharpDX.DXGI/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "4.0.0",
@@ -3787,6 +3873,49 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "SharpDX/3.0.2": {
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        }
+      },
+      "SharpDX.Direct2D1/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        }
+      },
+      "SharpDX.Direct3D11/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        }
+      },
+      "SharpDX.DXGI/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "4.0.0",
@@ -5451,6 +5580,49 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "SharpDX/3.0.2": {
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        }
+      },
+      "SharpDX.Direct2D1/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        }
+      },
+      "SharpDX.Direct3D11/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        }
+      },
+      "SharpDX.DXGI/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -7121,6 +7293,49 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "SharpDX/3.0.2": {
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        }
+      },
+      "SharpDX.Direct2D1/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        }
+      },
+      "SharpDX.Direct3D11/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        }
+      },
+      "SharpDX.DXGI/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "4.0.0",
@@ -8785,6 +9000,49 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "SharpDX/3.0.2": {
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        }
+      },
+      "SharpDX.Direct2D1/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        }
+      },
+      "SharpDX.Direct3D11/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        }
+      },
+      "SharpDX.DXGI/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -10453,6 +10711,49 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "SharpDX/3.0.2": {
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll": {}
+        }
+      },
+      "SharpDX.Direct2D1/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll": {}
+        }
+      },
+      "SharpDX.Direct3D11/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2",
+          "SharpDX.DXGI": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll": {}
+        }
+      },
+      "SharpDX.DXGI/3.0.2": {
+        "dependencies": {
+          "SharpDX": "3.0.2"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -12503,6 +12804,54 @@
         "ref/net46/Microsoft.Win32.Primitives.dll",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "SharpDX/3.0.2": {
+      "sha512": "nwELP2T20JtPHm+h+dQwabeNO1/UnKzWYP0LafIV73+fjww/G4yLcPedSRhgoK5H/pR8B5m4jOENUFqDmcq3fQ==",
+      "type": "package",
+      "files": [
+        "SharpDX.3.0.2.nupkg.sha512",
+        "SharpDX.nuspec",
+        "lib/net45/SharpDX.dll",
+        "lib/net45/SharpDX.xml",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.xml"
+      ]
+    },
+    "SharpDX.Direct2D1/3.0.2": {
+      "sha512": "1wirLriplszcwF0wCgWXQ7iv6X+6T7PVZi65w0gmmVy3saN5cxqbB2ZwJJ5l5sgR/AiqRKQlfD7XaF/WRzrQCg==",
+      "type": "package",
+      "files": [
+        "SharpDX.Direct2D1.3.0.2.nupkg.sha512",
+        "SharpDX.Direct2D1.nuspec",
+        "lib/net45/SharpDX.Direct2D1.dll",
+        "lib/net45/SharpDX.Direct2D1.xml",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct2D1.xml"
+      ]
+    },
+    "SharpDX.Direct3D11/3.0.2": {
+      "sha512": "Ldg26j0XQc0nIn8LkDbB9ah0foq2m0NgcRjMsZuAUHwAUZgMoxlpYTKagUQspHd1j5LF8KLJOoJ3gCBdXPUYBA==",
+      "type": "package",
+      "files": [
+        "SharpDX.Direct3D11.3.0.2.nupkg.sha512",
+        "SharpDX.Direct3D11.nuspec",
+        "lib/net45/SharpDX.Direct3D11.dll",
+        "lib/net45/SharpDX.Direct3D11.xml",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.Direct3D11.xml"
+      ]
+    },
+    "SharpDX.DXGI/3.0.2": {
+      "sha512": "DvkP5PBO1OuJT9tQBMNy9iweFpnedmlVRr+EO4kDvvLMf+kFVSnT0xHPA6KpN47KlVyuVck4xFsRB1rfrz1paA==",
+      "type": "package",
+      "files": [
+        "SharpDX.DXGI.3.0.2.nupkg.sha512",
+        "SharpDX.DXGI.nuspec",
+        "lib/net45/SharpDX.DXGI.dll",
+        "lib/net45/SharpDX.DXGI.xml",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1/SharpDX.DXGI.xml"
       ]
     },
     "System.AppContext/4.0.0": {
@@ -15044,6 +15393,8 @@
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
+      "SharpDX.Direct2D1 >= 3.0.2",
+      "SharpDX.Direct3D11 >= 3.0.2",
       "Win2D.uwp >= 1.17.0"
     ],
     "UAP,Version=v10.0": []
